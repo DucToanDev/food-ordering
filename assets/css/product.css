@@ -1,0 +1,262 @@
+.product__container {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Mặc định: 4 cột */
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+    .product__container {
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 cột */
+    }
+}
+
+/* Tablet */
+@media (max-width: 858px) {
+    .product__container {
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 cột */
+    }
+}
+
+@media (max-width: 820px) {
+    .product__container {
+        grid-template-columns: repeat(2, 1fr) !important; /* 3 cột */
+    }
+}
+/* Màn hình nhỏ */
+@media (max-width: 780px) {
+    .product__container {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 cột */
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 480px) {
+    .product__container {
+        grid-template-columns: repeat(2,1fr) !important; /* 1 cột */
+    }
+
+    .food__buy-btn {
+        font-size: 10px;
+    }
+}
+
+
+
+
+.product__card {
+    background-color: var(--color-header);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.303);
+}
+
+.product__card-img {
+    width: 100%;
+}
+
+.food-card-title {
+}
+
+.food__name {
+    width: 100%;
+    display: block;
+    text-align: start;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-button);
+}
+
+.product__card--food-img {
+    width: 100%;
+}
+
+.product__card-content {
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+    top: -50px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.product__card-content.load__move {
+    top: 0;
+    opacity: 1;
+}
+
+.food__card-price {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.food__price-before {
+    text-decoration: line-through;
+    color: var(--line-price-color);
+}
+
+.food__price-now {
+    color: var(--price-color);
+    font-weight: 600;
+
+}
+
+.food__card-note {
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    color: var(--line-price-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Giới hạn 3 dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.food__note {
+    text-align: start;
+}
+
+.food__card-btn {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+.food__buy-btn {
+    flex: 8;
+    height: 1.875rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: var(--color-button);
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: var(--bg-btn);
+    box-sizing: border-box;
+    /* padding: 0px 10px; */
+}
+
+
+
+.food__cart-btn {
+    flex: 1;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease;
+}
+
+.product__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product__top-title {
+    font-family: Playfair Display;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.product__card-tag {
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.303);
+
+}
+
+.product__top-note  {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.product__tag-btn {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.product__card-tag {
+    box-sizing: border-box;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product__card-tag:hover {
+    color: white;
+    background-color: var(--color-menu-link-hover);
+
+}
+
+.tag__1 {
+    color: white;
+    background-color: var(--color-menu-link-hover);
+}
+
+.open__menu {
+    color: var(--primary-color2) !important;
+}
+
+.open__menu {
+    border-color: var(--color-menu-link-hover);
+}
+
+.food__buy-btn {
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    font-family: 'Quicksand',  sans-serif;
+}
+.food__buy-btn:hover::before {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+.food__buy-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #000000be;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
